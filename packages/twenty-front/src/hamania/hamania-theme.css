@@ -1,0 +1,127 @@
+/*
+ * Hamania brand layer on top of the Twenty theme.
+ *
+ * Twenty's theme is CSS variables (--t-*) declared inside `@layer twenty-ui` on `.light` / `.dark`
+ * (packages/twenty-ui/src/theme/theme-*.css, generated). Rules outside any layer always win over
+ * layered ones, so overriding the variables here re-skins the whole app without touching the
+ * generated files, which keeps merges from upstream Twenty conflict-free.
+ *
+ * PLACEHOLDER palette from the approved triage mockup (same values as
+ * hamania-crm-twenty/twenty-app/src/constants/hamania-theme.ts). Replace both when the real
+ * logo / brand colors arrive.
+ *
+ *   background #0E0E0E · sidebar #131313 · surfaces #191919 / #232323 · lines #333
+ *   text #FFFFFF · muted #A3A3A3 · accent #F6C400 · text on accent #3a2e00 · font Heebo
+ */
+
+/* Heebo (OFL, see fonts/LICENSE-Heebo-OFL.txt), bundled: no request to Google at runtime. */
+@font-face { font-family: 'Heebo'; font-style: normal; font-display: swap; font-weight: 400; src: url(./fonts/heebo-hebrew-400-normal.woff2) format('woff2'); unicode-range: U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F; }
+@font-face { font-family: 'Heebo'; font-style: normal; font-display: swap; font-weight: 500; src: url(./fonts/heebo-hebrew-500-normal.woff2) format('woff2'); unicode-range: U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F; }
+@font-face { font-family: 'Heebo'; font-style: normal; font-display: swap; font-weight: 600; src: url(./fonts/heebo-hebrew-600-normal.woff2) format('woff2'); unicode-range: U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F; }
+@font-face { font-family: 'Heebo'; font-style: normal; font-display: swap; font-weight: 700; src: url(./fonts/heebo-hebrew-700-normal.woff2) format('woff2'); unicode-range: U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F; }
+@font-face { font-family: 'Heebo'; font-style: normal; font-display: swap; font-weight: 400; src: url(./fonts/heebo-latin-400-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: 'Heebo'; font-style: normal; font-display: swap; font-weight: 500; src: url(./fonts/heebo-latin-500-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: 'Heebo'; font-style: normal; font-display: swap; font-weight: 600; src: url(./fonts/heebo-latin-600-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: 'Heebo'; font-style: normal; font-display: swap; font-weight: 700; src: url(./fonts/heebo-latin-700-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+
+/* Both schemes: Heebo, and the yellow accent in place of Twenty's blue
+   (primary buttons, links, focus rings, selection). Select-option / tag colors are separate
+   variables (--t-tag-*) and keep their own colors. */
+.light,
+.dark {
+  --t-font-family: Heebo, Inter, sans-serif;
+
+  --t-color-blue: #f6c400;
+  --t-color-blue1: #16120a;
+  --t-color-blue2: #1d180c;
+  --t-color-blue3: #2e2507;
+  --t-color-blue4: #3d3005;
+  --t-color-blue5: #4a3b08;
+  --t-color-blue6: #5a490f;
+  --t-color-blue7: #6f5b17;
+  --t-color-blue8: #8f761f;
+  --t-color-blue9: #f6c400;
+  --t-color-blue10: #ffd21f;
+  --t-color-blue11: #f6d35e;
+  --t-color-blue12: #fbeab0;
+  --t-font-color-on-accent: #3a2e00;
+  --t-border-color-blue: #8f761f;
+  --t-background-transparent-blue: #f6c40033;
+  --t-buttons-secondary-text-color: #f6c400;
+}
+
+.light {
+  --t-color-blue1: #fffcef;
+  --t-color-blue2: #fff7d6;
+  --t-color-blue3: #fff0b3;
+  --t-color-blue4: #ffe78a;
+  --t-color-blue5: #ffdc5c;
+  --t-color-blue6: #f5cf3d;
+  --t-color-blue7: #e3bb1e;
+  --t-color-blue8: #c9a200;
+  --t-color-blue11: #7a5f00;
+  --t-color-blue12: #3a2e00;
+  --t-border-color-blue: #e3bb1e;
+  --t-buttons-secondary-text-color: #7a5f00;
+  --t-accent-primary: #fff0b3;
+  --t-accent-secondary: #fff0b3;
+  --t-accent-tertiary: #fff7d6;
+  --t-accent-quaternary: #fffcef;
+  --t-accent-accent3570: #e3bb1e;
+  --t-accent-accent4060: #e3bb1e;
+  --t-accent-accent1: #fffdf5;
+  --t-accent-accent2: #fffcef;
+  --t-accent-accent3: #fff7d6;
+  --t-accent-accent4: #fff0b3;
+  --t-accent-accent5: #ffe78a;
+  --t-accent-accent6: #ffdc5c;
+  --t-accent-accent7: #f5cf3d;
+  --t-accent-accent8: #e3bb1e;
+  --t-accent-accent9: #f6c400;
+  --t-accent-accent10: #ffd21f;
+  --t-accent-accent11: #7a5f00;
+  --t-accent-accent12: #3a2e00;
+}
+
+/* Dark: the mockup surfaces */
+.dark {
+  --t-accent-primary: #4a3b08;
+  --t-accent-secondary: #4a3b08;
+  --t-accent-tertiary: #2e2507;
+  --t-accent-quaternary: #1d180c;
+  --t-accent-accent3570: #8f761f;
+  --t-accent-accent4060: #8f761f;
+  --t-accent-accent1: #16120a;
+  --t-accent-accent2: #1d180c;
+  --t-accent-accent3: #2e2507;
+  --t-accent-accent4: #3d3005;
+  --t-accent-accent5: #4a3b08;
+  --t-accent-accent6: #5a490f;
+  --t-accent-accent7: #6f5b17;
+  --t-accent-accent8: #8f761f;
+  --t-accent-accent9: #f6c400;
+  --t-accent-accent10: #ffd21f;
+  --t-accent-accent11: #f6d35e;
+  --t-accent-accent12: #fbeab0;
+
+  --t-background-primary: #0e0e0e;
+  --t-background-secondary: #131313;
+  --t-background-tertiary: #191919;
+  --t-background-quaternary: #232323;
+  --t-background-noisy: none;
+
+  --t-border-color-strong: #3d3d3d;
+  --t-border-color-medium: #2b2b2b;
+  --t-border-color-light: #222222;
+
+  --t-font-color-primary: #ffffff;
+  --t-font-color-secondary: #d4d4d4;
+  --t-font-color-tertiary: #a3a3a3;
+  --t-font-color-light: #7a7a7a;
+  --t-font-color-extra-light: #555555;
+  --t-font-color-inverted: #0e0e0e;
+}
+
+body {
+  font-family: Heebo, Inter, sans-serif;
+}
