@@ -11,6 +11,9 @@ import { AppPath } from 'twenty-shared/types';
 import { themeCssVariables } from 'twenty-ui/theme';
 import { type PublicWorkspaceData } from '~/generated-metadata/graphql';
 
+// Hamania white-label: the footer links to twenty.com terms and privacy policy.
+const HAMANIA_SHOW_TWENTY_TERMS = false;
+
 const StyledTitleContainer = styled.div`
   line-height: 1.2;
   margin-top: ${themeCssVariables.spacing[10]};
@@ -65,7 +68,7 @@ export const SignInUpStandardContent = ({
         SignInUpStep.TwoFactorAuthenticationRecovery,
         SignInUpStep.WorkspaceSelection,
         SignInUpStep.WorkspaceCreation,
-      ].includes(signInUpStep) && <FooterNote />}
+      ].includes(signInUpStep) && HAMANIA_SHOW_TWENTY_TERMS && <FooterNote />}
     </StyledAuthContent>
   );
 };

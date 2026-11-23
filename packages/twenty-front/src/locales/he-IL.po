@@ -1711,7 +1711,7 @@ msgstr "הגישה אל {objectLabelPlural} מוגדרת לפי תפקידים, 
 #. js-lingui-id: rkbqAv
 #: src/modules/settings/mcp/utils/mcpSetup.ts
 msgid "Access your Twenty workspace through MCP"
-msgstr "גש לסביבת העבודה שלך ב-Twenty באמצעות MCP"
+msgstr "גש לסביבת העבודה שלך בחמניה באמצעות MCP"
 
 #. js-lingui-id: CrjDqe
 #: src/pages/auth/Authorize.tsx
@@ -2485,37 +2485,37 @@ msgstr "הוסף חברי צוות"
 #. js-lingui-id: FKGcEL
 #: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
 msgid "Add the Twenty MCP server as a remote context server in Zed."
-msgstr "הוסף את שרת Twenty MCP בתור שרת הקשר מרוחק בתוך Zed."
+msgstr "הוסף את שרת החמניה MCP בתור שרת הקשר מרוחק בתוך Zed."
 
 #. js-lingui-id: iA2nHX
 #: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
 msgid "Add the Twenty MCP server from Augment Code settings."
-msgstr "הוסף את שרת Twenty MCP מההגדרות של Augment Code."
+msgstr "הוסף את שרת החמניה MCP מההגדרות של Augment Code."
 
 #. js-lingui-id: l+NzAk
 #: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
 msgid "Add the Twenty MCP server from Raycast's MCP commands or settings."
-msgstr "הוסף את שרת Twenty MCP מפקודות או מההגדרות של MCP ב-Raycast."
+msgstr "הוסף את שרת החמניה MCP מפקודות או מההגדרות של MCP ב-Raycast."
 
 #. js-lingui-id: j6G/yI
 #: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
 msgid "Add the Twenty MCP server in Gemini CLI settings."
-msgstr "הוסף את שרת Twenty MCP בהגדרות Gemini CLI."
+msgstr "הוסף את שרת החמניה MCP בהגדרות Gemini CLI."
 
 #. js-lingui-id: /OyhlM
 #: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
 msgid "Add the Twenty MCP server to your LibreChat configuration file."
-msgstr "הוסף את שרת Twenty MCP לקובץ התצורה של LibreChat שלך."
+msgstr "הוסף את שרת החמניה MCP לקובץ התצורה של LibreChat שלך."
 
 #. js-lingui-id: K0DXoj
 #: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
 msgid "Add the Twenty remote server with LM Studio's install link."
-msgstr "הוסף את השרת המרוחק של Twenty באמצעות קישור ההתקנה של LM Studio."
+msgstr "הוסף את השרת המרוחק של החמניה באמצעות קישור ההתקנה של LM Studio."
 
 #. js-lingui-id: BTFMKE
 #: src/pages/settings/communications/SettingsWorkspaceCommunicationGroupChannelDetail.tsx
 msgid "Add these records at your DNS provider. Twenty checks them automatically."
-msgstr "הוסף רשומות אלה אצל ספק ה-DNS שלך. Twenty בודקת אותן באופן אוטומטי."
+msgstr "הוסף רשומות אלה אצל ספק ה-DNS שלך. החמניה בודקת אותן באופן אוטומטי."
 
 #. js-lingui-id: Bc+ryO
 #: src/modules/related-record-paths/components/SettingsObjectRelatedRecordPathPicker.tsx
@@ -2551,7 +2551,7 @@ msgstr "הוסף נושא"
 #. js-lingui-id: 4D/zWv
 #: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
 msgid "Add Twenty as a Streamable HTTP extension in Goose."
-msgstr "הוסף את Twenty כהרחבת Streamable HTTP ב-Goose."
+msgstr "הוסף את החמניה כהרחבת Streamable HTTP ב-Goose."
 
 #. js-lingui-id: XnwceV
 #: src/pages/settings/applications/components/SettingsApplicationRegistrationRedirectURIsInput.tsx
@@ -3873,7 +3873,7 @@ msgstr "יישומים"
 #. js-lingui-id: q7rlQw
 #: src/pages/settings/applications/tabs/SettingsApplicationsAvailableTab.tsx
 msgid "Applications below have not been reviewed by Twenty. Use at your own risk."
-msgstr "היישומים הבאים לא נבדקו על ידי Twenty. השימוש באחריותך בלבד."
+msgstr "היישומים הבאים לא נבדקו על ידי החמניה. השימוש באחריותך בלבד."
 
 #. js-lingui-id: p98xmP
 #: src/modules/settings/admin-panel/components/SettingsAdminWorkspaceUsageLimitsSection.tsx
@@ -4551,7 +4551,7 @@ msgstr "התקן אפליקציה זו אוטומטית בכל סביבת עבו
 #. js-lingui-id: MHsVk5
 #: src/pages/settings/ai/components/SettingsAiModelTiersPreview.tsx
 msgid "Automatically selected by Twenty for this mode."
-msgstr "נבחר אוטומטית על ידי Twenty עבור מצב זה."
+msgstr "נבחר אוטומטית על ידי החמניה עבור מצב זה."
 
 #. js-lingui-id: XFGV21
 #: src/pages/settings/applications/tabs/SettingsApplicationAutoUpdateSection.tsx
@@ -4800,7 +4800,7 @@ msgstr "תקופת חיוב"
 #. js-lingui-id: xF/NXI
 #: src/modules/settings/billing/hooks/useBillingPortalSession.ts
 msgid "Billing portal session error. Please retry or contact Twenty team"
-msgstr "שגיאה במושב פורטל החיוב. בבקשה נסה שנית או צור קשר עם צוות Twenty"
+msgstr "שגיאה במושב פורטל החיוב. בבקשה נסה שנית או צור קשר עם צוות החמניה"
 
 #. js-lingui-id: H++SIW
 #: src/modules/settings/billing/hooks/useBillingSubscriptionChangeWording.ts
@@ -5089,7 +5089,7 @@ msgstr "מאת {trimmedAuthor}"
 #. js-lingui-id: 8Pfllj
 #: src/modules/auth/sign-in-up/components/FooterNote.tsx
 msgid "By using Twenty, you agree to the"
-msgstr "על ידי שימוש ב-Twenty, אתה מסכים ל"
+msgstr "על ידי שימוש בחמניה, אתה מסכים ל"
 
 #. js-lingui-id: 7l+dLC
 #: src/modules/marketplace/constants/PermissionFlagSummaryConfigs.ts
@@ -5695,7 +5695,7 @@ msgstr "שינויים"
 #. js-lingui-id: OhVo1W
 #: src/modules/settings/security/components/SettingsSecurityIframeMediaPermissions.tsx
 msgid "Changes saved. Reload open Twenty tabs to apply the updated permissions. Reloading ends active calls and recordings."
-msgstr "השינויים נשמרו. טענו מחדש את לשוניות Twenty הפתוחות כדי להחיל את ההרשאות המעודכנות. טעינה מחדש מסיימת שיחות והקלטות פעילות."
+msgstr "השינויים נשמרו. טענו מחדש את לשוניות החמניה הפתוחות כדי להחיל את ההרשאות המעודכנות. טעינה מחדש מסיימת שיחות והקלטות פעילות."
 
 #. js-lingui-id: oRH6Dq
 #: src/modules/metadata-error-handler/hooks/useMetadataErrorHandler.ts
@@ -5862,7 +5862,7 @@ msgstr "בודק את זמינות היומן…"
 #: src/modules/settings/billing/hooks/useHandleCheckoutSession.ts
 #: src/modules/settings/billing/hooks/useHandleCheckoutSession.ts
 msgid "Checkout session error. Please retry or contact Twenty team"
-msgstr "שגיאת חיבור במעמד תשלום. בבקשה נסה שנית או צור קשר עם צוות Twenty"
+msgstr "שגיאת חיבור במעמד תשלום. בבקשה נסה שנית או צור קשר עם צוות החמניה"
 
 #. js-lingui-id: SviKkE
 #: src/modules/localization/hooks/useLocaleOptions.ts
@@ -6857,12 +6857,12 @@ msgstr "הגדר את השרת המרוחק בהגדרות MCP של Amazon Q Dev
 #. js-lingui-id: g1/8jH
 #: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
 msgid "Configure the Twenty MCP server manually in Cascade."
-msgstr "הגדר ידנית את שרת Twenty MCP ב-Cascade."
+msgstr "הגדר ידנית את שרת החמניה MCP ב-Cascade."
 
 #. js-lingui-id: XiyvRh
 #: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
 msgid "Configure the Twenty MCP server manually in Cline."
-msgstr "הגדר ידנית את שרת Twenty MCP ב-Cline."
+msgstr "הגדר ידנית את שרת החמניה MCP ב-Cline."
 
 #. js-lingui-id: qA9AGQ
 #: src/modules/settings/domains/components/SettingsDomainRecords.tsx
@@ -7688,7 +7688,7 @@ msgstr "ספור לפי"
 #. js-lingui-id: EEqRLn
 #: src/modules/settings/workspace/components/ClickTrackingSwitch.tsx
 msgid "Count clicks by routing campaign links through Twenty before the original page."
-msgstr "ספרו קליקים על ידי ניתוב קישורי קמפיינים דרך Twenty לפני הדף המקורי."
+msgstr "ספרו קליקים על ידי ניתוב קישורי קמפיינים דרך החמניה לפני הדף המקורי."
 
 #. js-lingui-id: vQJINq
 #: src/modules/object-record/record-board/record-board-column/utils/getAggregateOperationLabel.ts
@@ -11485,7 +11485,7 @@ msgstr "שגיאה בביטול החלפת תכנית."
 #. js-lingui-id: QmR+2U
 #: src/modules/settings/billing/hooks/useEndSubscriptionTrialPeriod.ts
 msgid "Error while ending trial period. Please contact Twenty team."
-msgstr "שגיאה בעת סיום תקופת הניסיון. אנא פנה לצוות Twenty."
+msgstr "שגיאה בעת סיום תקופת הניסיון. אנא פנה לצוות החמניה."
 
 #. js-lingui-id: 5g78zo
 #: src/pages/settings/members/SettingsWorkspaceMember.tsx
@@ -11660,7 +11660,7 @@ msgid ""
 "\n"
 "**Free**: no credits, no metering."
 msgstr ""
-"כל סביבת עבודה של Twenty מתחילה עם יישום זה. הוא מגדיר את המבנה של ה-CRM שלכם: אובייקטי הליבה, האופן שבו הם קשורים זה לזה, והתצוגות ודפי הרשומות שהצוות שלכם עובד בהם. יישומי Marketplace, סוכני AI וההתאמות האישיות שלכם נבנים כולם על גביו.\n"
+"כל סביבת עבודה של החמניה מתחילה עם יישום זה. הוא מגדיר את המבנה של ה-CRM שלכם: אובייקטי הליבה, האופן שבו הם קשורים זה לזה, והתצוגות ודפי הרשומות שהצוות שלכם עובד בהם. יישומי Marketplace, סוכני AI וההתאמות האישיות שלכם נבנים כולם על גביו.\n"
 "\n"
 "## ✨ מה תקבלו\n"
 "\n"
@@ -11672,7 +11672,7 @@ msgstr ""
 "\n"
 "## 📌 טוב לדעת\n"
 "\n"
-"- מותקן בכל סביבת עבודה ומתוחזק על ידי Twenty\n"
+"- מותקן בכל סביבת עבודה ומתוחזק על ידי החמניה\n"
 "- לא ניתן להסיר את ההתקנה: שאר סביבת העבודה בנויה עליו\n"
 "- האובייקטים, השדות והפריסות שלכם נמצאים ביישום **Custom**\n"
 "\n"
@@ -11732,7 +11732,7 @@ msgstr ""
 "\n"
 "- נוצרה עם סביבת העבודה שלכם וייחודית לה\n"
 "- לא ניתן להסיר את ההתקנה: היא מכילה את ההתאמות האישיות של סביבת העבודה שלכם\n"
-"- התאמות אישיות שאתם מבצעים מממשק Twenty נשמרות כאן באופן אוטומטי\n"
+"- התאמות אישיות שאתם מבצעים מממשק החמניה נשמרות כאן באופן אוטומטי\n"
 "\n"
 "## 💳 חיוב\n"
 "\n"
@@ -14195,7 +14195,7 @@ msgstr "ציטוט מודגש"
 #. js-lingui-id: 1ETc0T
 #: src/pages/settings/community/SettingsCommunity.tsx
 msgid "Hire a partner to help you implement and customize Twenty."
-msgstr "שכרו שותף שיסייע לכם להטמיע ולהתאים אישית את Twenty."
+msgstr "שכרו שותף שיסייע לכם להטמיע ולהתאים אישית את החמניה."
 
 #. js-lingui-id: i0qMbr
 #: src/modules/ai/components/AiChatNewThreadPageActions.tsx
@@ -17622,7 +17622,7 @@ msgstr "נדרש מודל"
 #. js-lingui-id: iaurWj
 #: src/pages/settings/ai/components/SettingsAiModelsTab.tsx
 msgid "Model used when you chat with Twenty"
-msgstr "המודל שבו נעשה שימוש כשאתה משוחח עם Twenty"
+msgstr "המודל שבו נעשה שימוש כשאתה משוחח עם החמניה"
 
 #. js-lingui-id: //nm2/
 #: src/pages/settings/admin-panel/SettingsAdminAiProviderDetail.tsx
@@ -20066,7 +20066,7 @@ msgstr "אחת לכל הרצה"
 #. js-lingui-id: 1WZTTl
 #: src/pages/settings/enterprise/SettingsEnterprise.tsx
 msgid "One subscription provides one Organization key that powers one production instance and one potential staging or test instance. To run a staging or test environment, install Twenty on a second server, activate it with this same Organization key, then register that server as a development instance. Development instances unlock premium features without extra billing and do not count toward your production seats."
-msgstr "מנוי אחד מספק מפתח ארגון אחד שמפעיל מופע ייצור אחד ומופע פוטנציאלי אחד של סביבת הכנה או בדיקות. כדי להפעיל סביבת הכנה או בדיקות, התקן את Twenty בשרת שני, הפעל אותו עם אותו מפתח ארגון, ולאחר מכן רשום את השרת הזה כמופע פיתוח. מופעי פיתוח פותחים תכונות פרימיום ללא חיוב נוסף ואינם נספרים במסגרת המושבים שלך בסביבת הייצור."
+msgstr "מנוי אחד מספק מפתח ארגון אחד שמפעיל מופע ייצור אחד ומופע פוטנציאלי אחד של סביבת הכנה או בדיקות. כדי להפעיל סביבת הכנה או בדיקות, התקן את החמניה בשרת שני, הפעל אותו עם אותו מפתח ארגון, ולאחר מכן רשום את השרת הזה כמופע פיתוח. מופעי פיתוח פותחים תכונות פרימיום ללא חיוב נוסף ואינם נספרים במסגרת המושבים שלך בסביבת הייצור."
 
 #. js-lingui-id: JzXn58
 #: src/pages/settings/applications/utils/getClaimErrorContent.ts
@@ -20214,7 +20214,7 @@ msgstr "פתח צ'אטים ב"
 #. js-lingui-id: n0vVgf
 #: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
 msgid "Open Claude with the Twenty connector name and MCP URL prefilled."
-msgstr "פתח את Claude כששם מחבר Twenty וכתובת ה-URL של MCP מולאו מראש."
+msgstr "פתח את Claude כששם מחבר החמניה וכתובת ה-URL של MCP מולאו מראש."
 
 #. js-lingui-id: N4OQXf
 #: src/modules/advanced-text-editor/components/AdvancedTextEditorTableHandleMenu.tsx
@@ -20229,7 +20229,7 @@ msgstr "פתח שיחה חדשה"
 #. js-lingui-id: +n2jpB
 #: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
 msgid "Open Cursor's MCP installer with the Twenty remote server config."
-msgstr "פתח את מתקין ה-MCP של Cursor עם תצורת השרת המרוחק של Twenty."
+msgstr "פתח את מתקין ה-MCP של Cursor עם תצורת השרת המרוחק של החמניה."
 
 #. js-lingui-id: pZZH4Q
 #: src/modules/auth/sign-in-up/components/EmailVerificationSent.tsx
@@ -20310,7 +20310,7 @@ msgstr "פתח רשומות בדף ייעודי"
 #. js-lingui-id: q170S2
 #: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
 msgid "Open Replit with the Twenty remote server config."
-msgstr "פתח את Replit עם תצורת השרת המרוחק של Twenty."
+msgstr "פתח את Replit עם תצורת השרת המרוחק של החמניה."
 
 #. js-lingui-id: iMBVhp
 #: src/modules/advanced-text-editor/components/AdvancedTextEditorTableHandleMenu.tsx
@@ -20340,7 +20340,7 @@ msgstr "פתח את חלונית הצד"
 #. js-lingui-id: sBd/cl
 #: src/modules/settings/mcp/utils/buildMcpSetupCategories.tsx
 msgid "Open Twenty's official ChatGPT integration for your workspace."
-msgstr "פתח את אינטגרציית ChatGPT הרשמית של Twenty עבור סביבת העבודה שלך."
+msgstr "פתח את אינטגרציית ChatGPT הרשמית של החמניה עבור סביבת העבודה שלך."
 
 #. js-lingui-id: tirDue
 #: src/modules/log-console/constants/LogConsoleSources.tsx
@@ -20824,7 +20824,7 @@ msgstr "שם עמוד"
 #. js-lingui-id: NRvxzv
 #: src/pages/not-found/NotFound.tsx
 msgid "Page Not Found | Twenty"
-msgstr "הדף לא נמצא | Twenty"
+msgstr "הדף לא נמצא | החמניה"
 
 #. js-lingui-id: QbrUIo
 #: src/modules/log-console/constants/LogConsoleSources.tsx
@@ -26493,7 +26493,7 @@ msgstr "המנוי הופעל."
 #: src/modules/settings/billing/hooks/useSubmitSubscriptionPayment.ts
 #: src/modules/settings/billing/hooks/useSubmitSubscriptionPayment.ts
 msgid "Subscription error. Please retry or contact Twenty team"
-msgstr "שגיאת מנוי. בבקשה נסה שנית או צור קשר עם צוות Twenty"
+msgstr "שגיאת מנוי. בבקשה נסה שנית או צור קשר עם צוות החמניה"
 
 #. js-lingui-id: kSY/ji
 #: src/modules/settings/billing/hooks/useApplyBillingSubscriptionChange.ts
@@ -27091,7 +27091,7 @@ msgstr "אזור ה-AWS עבור Bedrock"
 #. js-lingui-id: bEyeZg
 #: src/modules/applications/utils/getStandardApplicationDescription.ts
 msgid "The base data model every Twenty workspace runs on."
-msgstr "מודל הנתונים הבסיסי שעליו פועלת כל סביבת עבודה של Twenty."
+msgstr "מודל הנתונים הבסיסי שעליו פועלת כל סביבת עבודה של החמניה."
 
 #. js-lingui-id: 832YJ9
 #: src/modules/validation-rules/constants/ValidationRuleKeywords.ts
@@ -27278,7 +27278,7 @@ msgstr ""
 #. js-lingui-id: Ya1wb4
 #: src/pages/settings/legal/SettingsLegalDpaNew.tsx
 msgid "The PDF is pre-signed by Twenty and executed with your legal entity and authorized signatory."
-msgstr "ה-PDF נחתם מראש על ידי Twenty ומבוצע עם הישות המשפטית שלך והחותם המורשה שלך."
+msgstr "ה-PDF נחתם מראש על ידי החמניה ומבוצע עם הישות המשפטית שלך והחותם המורשה שלך."
 
 #. js-lingui-id: iz994T
 #: src/modules/ai/components/AiChatApprovalMergeReview.tsx
@@ -27588,7 +27588,7 @@ msgstr "יישום זה אינו מותקן בסביבת עבודה זו. יית
 #: src/modules/marketplace/components/SettingsApplicationInstallPermissionValidationModal.tsx
 #: src/pages/settings/applications/SettingsAvailableApplicationDetails.tsx
 msgid "This application is not listed on the marketplace and has not been reviewed by Twenty. Use at your own risk."
-msgstr "אפליקציה זו אינה מופיעה במרקטפלייס ולא נבדקה על ידי Twenty. השימוש הוא על אחריותכם בלבד."
+msgstr "אפליקציה זו אינה מופיעה במרקטפלייס ולא נבדקה על ידי החמניה. השימוש הוא על אחריותכם בלבד."
 
 #. js-lingui-id: X7w5n6
 #: src/pages/settings/applications/tabs/SettingsApplicationRegistrationDistributionTab.tsx
@@ -28665,22 +28665,22 @@ msgstr "טורקיז"
 #. js-lingui-id: 8pmRvi
 #: src/pages/onboarding/SyncEmails.tsx
 msgid "Twenty adds the people you email and meet, and keeps them up to date without manual data entry."
-msgstr "Twenty מוסיפה את האנשים שאיתם אתה מתכתב בדוא\"ל ונפגש, ושומרת את פרטיהם מעודכנים ללא הזנת נתונים ידנית."
+msgstr "החמניה מוסיפה את האנשים שאיתם אתה מתכתב בדוא\"ל ונפגש, ושומרת את פרטיהם מעודכנים ללא הזנת נתונים ידנית."
 
 #. js-lingui-id: JnaRPe
 #: src/modules/spreadsheet-import/steps/components/MatchColumnsStep/components/ColumnGrid.tsx
 msgid "Twenty fields"
-msgstr "שדות Twenty"
+msgstr "שדות החמניה"
 
 #. js-lingui-id: pNo8xt
 #: src/pages/settings/ai/components/SettingsAiModelsTab.tsx
 msgid "Twenty fills each level with the best model that meets your requirements"
-msgstr "Twenty ממלאת כל רמה במודל הטוב ביותר שעומד בדרישות שלך"
+msgstr "החמניה ממלאת כל רמה במודל הטוב ביותר שעומד בדרישות שלך"
 
 #. js-lingui-id: qUadjH
 #: src/modules/onboarding/components/OnboardingInviteTeamSkipDialog.tsx
 msgid "Twenty works better with your team"
-msgstr "Twenty עובדת טוב יותר עם הצוות שלך"
+msgstr "החמניה עובדת טוב יותר עם הצוות שלך"
 
 #. js-lingui-id: YIjS4q
 #: src/modules/ai/components/SettingsAgentModelCapabilities.tsx
@@ -30818,7 +30818,7 @@ msgstr ""
 #. js-lingui-id: nTuObL
 #: src/pages/auth/SignInUp.tsx
 msgid "Welcome to Twenty"
-msgstr "ברוכים הבאים ל-Twenty"
+msgstr "ברוכים הבאים לסורק הנכסים של החמניה"
 
 #. js-lingui-id: t8ZvkC
 #: src/modules/onboarding/constants/WelcomeTitleMessage.ts

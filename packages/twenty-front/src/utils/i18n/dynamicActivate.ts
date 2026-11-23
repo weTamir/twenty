@@ -1,4 +1,6 @@
 import { i18n } from '@lingui/core';
+
+import { hamaniaBrandMessages } from '~/hamania/hamaniaBrandMessages';
 import {
   APP_LOCALES,
   getLocaleTextDirection,
@@ -12,7 +14,7 @@ export const dynamicActivate = async (locale: keyof typeof APP_LOCALES) => {
     locale = SOURCE_LOCALE;
   }
   const { messages } = await import(`../../locales/generated/${locale}.ts`);
-  i18n.load(locale, messages);
+  i18n.load(locale, hamaniaBrandMessages(locale, messages));
   i18n.activate(locale);
 
   document.documentElement.lang = locale;

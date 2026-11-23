@@ -1,34 +1,30 @@
 <!doctype html>
-<html lang="en" translate="no" class="light">
+<html lang="he" dir="rtl" translate="no" class="dark">
   <head>
     <meta charset="UTF-8" />
 
     <link
       rel="icon"
-      type="image/x-icon"
-      href="/images/icons/android/android-launchericon-48-48.png"
+      type="image/png"
+      href="/images/hamania/icon-48.png"
       data-rh="true"
     />
-    <link rel="apple-touch-icon" href="/images/icons/ios/192.png" />
+    <link rel="apple-touch-icon" href="/images/hamania/icon-180.png" />
     <link rel="manifest" href="/manifest.json" crossorigin="use-credentials" />
 
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="A modern open-source CRM" />
-    <meta
-      property="og:image"
-      content="https://raw.githubusercontent.com/twentyhq/twenty/main/docs/static/img/social-card.png"
-    />
-    <meta property="og:description" content="A modern open-source CRM" />
-    <meta property="og:title" content="Twenty" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:image"
-      content="https://raw.githubusercontent.com/twentyhq/twenty/main/docs/static/img/social-card.png"
-    />
+    <meta name="theme-color" content="#121212" />
+    <meta name="apple-mobile-web-app-title" content="החמניה" />
+    <meta name="application-name" content="סורק הנכסים של החמניה" />
+    <meta name="description" content="סורק הנכסים של החמניה" />
+    <meta property="og:image" content="/images/hamania/icon-512.png" />
+    <meta property="og:description" content="סורק הנכסים של החמניה" />
+    <meta property="og:title" content="סורק הנכסים של החמניה" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="/images/hamania/icon-512.png" />
 
-    <meta name="twitter:description" content="A modern open-source CRM" />
-    <meta name="twitter:title" content="Twenty" />
-    <title>Twenty</title>
+    <meta name="twitter:description" content="סורק הנכסים של החמניה" />
+    <meta name="twitter:title" content="סורק הנכסים של החמניה" />
+    <title>סורק הנכסים של החמניה</title>
     <!-- BEGIN: Twenty Config -->
     <script id="twenty-env-config">
       window._env_ = {
@@ -69,18 +65,10 @@
         --theme-light-background-secondary: #fcfcfc;
       }
 
-      @media (prefers-color-scheme: dark) {
-        html,
-        body {
-          background-color: var(--theme-dark-background-secondary);
-        }
-      }
-
-      @media (prefers-color-scheme: light) {
-        html,
-        body {
-          background-color: var(--theme-light-background-secondary);
-        }
+      /* Hamania: dark before the app loads, whatever the OS colour scheme */
+      html,
+      body {
+        background-color: var(--theme-dark-background-secondary);
       }
     </style>
   </head>

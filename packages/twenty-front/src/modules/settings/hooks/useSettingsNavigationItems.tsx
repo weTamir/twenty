@@ -203,7 +203,8 @@ const useSettingsNavigationItems = (): SettingsNavigationSection[] => {
           label: t`Community`,
           path: SettingsPath.Community,
           Icon: IconUsers,
-          isHidden: !permissionFlagMap[PermissionFlagType.WORKSPACE],
+          // Hamania white-label: Twenty's community page links to twenty.com
+          isHidden: true,
         },
         {
           label: t`Support`,
@@ -218,6 +219,8 @@ const useSettingsNavigationItems = (): SettingsNavigationSection[] => {
               getDocumentationUrl({ locale: currentWorkspaceMember?.locale }),
             ),
           Icon: IconHelpCircle,
+          // Hamania white-label: docs.twenty.com
+          isHidden: true,
         },
         {
           label: t`Logout`,

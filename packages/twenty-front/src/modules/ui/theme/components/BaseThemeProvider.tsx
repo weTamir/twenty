@@ -12,6 +12,8 @@ import { useAtomStateValue } from '@/ui/utilities/state/jotai/hooks/useAtomState
 import { ThemeProvider } from 'twenty-ui/theme';
 import { type ColorScheme } from '@/ui/theme/types/ColorScheme';
 
+const HAMANIA_FOLLOW_SYSTEM_SCHEME = false;
+
 type BaseThemeProviderProps = {
   children: JSX.Element | JSX.Element[];
 };
@@ -28,10 +30,14 @@ export const BaseThemeProvider = ({ children }: BaseThemeProviderProps) => {
   // Salesfarce: remove with the theme
   const salesfarceIsActive = useAtomStateValue(salesfarceIsActiveState);
   const systemColorScheme = useSystemColorScheme();
+  // Hamania: dark is the default. "System" (also the signed-out default) renders dark whatever the
+  // OS says; only an explicit "Light" choice renders light.
   const effectiveColorScheme =
-    persistedColorScheme === 'System'
+    persistedColorScheme === 'System' && HAMANIA_FOLLOW_SYSTEM_SCHEME
       ? systemColorScheme
-      : persistedColorScheme;
+      : persistedColorScheme === 'Light'
+        ? 'Light'
+        : 'Dark';
 
   return (
     <ThemeSchemeContext.Provider value={setPersistedColorScheme}>
