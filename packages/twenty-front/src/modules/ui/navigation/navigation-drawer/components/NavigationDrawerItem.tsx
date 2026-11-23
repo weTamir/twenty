@@ -123,7 +123,9 @@ const StyledItem = styled.button<StyledItemProps>`
   }
 
   @media (max-width: ${MOBILE_VIEWPORT}px) {
-    height: ${NAVIGATION_DRAWER_COLLAPSED_BUTTON_SIZE}px;
+    /* Hamania: on phones this list is the main menu, so the rows are a touch larger. */
+    font-size: calc(${themeCssVariables.font.size.md} * 1.15);
+    height: ${themeCssVariables.spacing[10]};
   }
 `;
 
@@ -176,8 +178,15 @@ const StyledIcon = styled.div`
   flex-grow: 0;
   flex-shrink: 0;
   justify-content: center;
-  margin-right: ${themeCssVariables.spacing[2]};
+  margin-inline-end: ${themeCssVariables.spacing[2]};
   position: relative;
+
+  @media (max-width: ${MOBILE_VIEWPORT}px) {
+    & > svg {
+      height: 20px;
+      width: 20px;
+    }
+  }
 `;
 
 const StyledRightOptionsContainer = styled.div`
