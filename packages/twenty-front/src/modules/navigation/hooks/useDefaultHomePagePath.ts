@@ -98,13 +98,14 @@ export const useDefaultHomePagePath = () => {
       return AppPath.SignInUp;
     }
 
-    if (isMobile) {
-      return AppPath.Home;
-    }
-
     // Both stores are empty right after login; deciding now would pick a wrong fallback.
     if (!areObjectMetadataItemsLoaded || !areNavigationMenuItemsLoaded) {
       return AppPath.Index;
+    }
+
+    // Hamania: phones land on the first sidebar page too (the triage); Home stays the page list.
+    if (isMobile) {
+      return firstNavigationMenuItemLink ?? AppPath.Home;
     }
 
     if (isEmpty(readableNonSystemObjectMetadataItems)) {

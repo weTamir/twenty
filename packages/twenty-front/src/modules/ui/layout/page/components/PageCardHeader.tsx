@@ -7,6 +7,10 @@ import { type BreadcrumbProps } from '@/ui/navigation/bread-crumb/types/Breadcru
 import { PAGE_ACTION_CONTAINER_CLICK_OUTSIDE_ID } from '@/ui/layout/page/constants/PageActionContainerClickOutsideId';
 import { NavigationDrawerCollapseButton } from '@/ui/navigation/navigation-drawer/components/NavigationDrawerCollapseButton';
 import { useIsMobile } from 'twenty-ui/utilities';
+import { useLingui } from '@lingui/react/macro';
+import { useNavigate } from 'react-router-dom';
+import { AppPath } from 'twenty-shared/types';
+import { IconChevronDown } from 'twenty-ui/icon';
 import { styled } from '@linaria/react';
 import { type ReactNode } from 'react';
 import { createPortal } from 'react-dom';
@@ -61,6 +65,33 @@ const StyledTitle = styled.div<{ titleColor?: string }>`
   min-width: 0;
 `;
 
+// Hamania: on phones the page name opens the page list (the mobile home), so it must read as a control.
+const StyledMobileTitleButton = styled.button`
+  align-items: center;
+  background: none;
+  border: none;
+  border-radius: ${themeCssVariables.border.radius.sm};
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  gap: ${themeCssVariables.spacing[1]};
+  margin: 0 calc(-1 * ${themeCssVariables.spacing[1]});
+  min-height: 40px;
+  min-width: 0;
+  padding: 0 ${themeCssVariables.spacing[1]};
+  -webkit-tap-highlight-color: transparent;
+
+  &:active {
+    background: ${themeCssVariables.background.transparent.light};
+  }
+
+  & > svg:last-child {
+    color: ${themeCssVariables.font.color.tertiary};
+    flex-shrink: 0;
+  }
+`;
+
 const StyledCenteredTitle = styled(StyledTitle)`
   grid-column: 2;
   justify-content: center;
@@ -103,6 +134,8 @@ export const PageCardHeader = ({
   titleColor,
 }: PageCardHeaderProps) => {
   const isMobile = useIsMobile();
+  const { t } = useLingui();
+  const navigate = useNavigate();
   const isNavigationDrawerExpanded = useNavigationDrawerExpanded();
   const workspaceSurface = useWorkspaceSurface();
   const workspaceSurfaceHeaderPortal = useWorkspaceSurfaceHeaderPortal();
@@ -160,9 +193,22 @@ export const PageCardHeader = ({
         {isDefined(breadcrumb)
           ? breadcrumb
           : isDefined(links) && <Breadcrumb links={links} />}
-        {!shouldCenterTitle && hasTitleContent && (
-          <StyledTitle titleColor={titleColor}>{titleContent}</StyledTitle>
-        )}
+        {!shouldCenterTitle &&
+          hasTitleContent &&
+          (isMobile && !isDefined(breadcrumb) && !isDefined(links) ? (
+            <StyledTitle titleColor={titleColor}>
+              <StyledMobileTitleButton
+                type="button"
+                aria-label={t`Open the page list`}
+                onClick={() => navigate(AppPath.Home)}
+              >
+                {titleContent}
+                <IconChevronDown size={16} aria-hidden />
+              </StyledMobileTitleButton>
+            </StyledTitle>
+          ) : (
+            <StyledTitle titleColor={titleColor}>{titleContent}</StyledTitle>
+          ))}
       </StyledLeft>
       {shouldCenterTitle && (
         <StyledCenteredTitle titleColor={titleColor}>

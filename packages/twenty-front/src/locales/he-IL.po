@@ -23902,7 +23902,7 @@ msgstr "SDK"
 #: src/pages/settings/data-model/SettingsObjectSearch.tsx
 #: src/pages/settings/data-model/SettingsObjectSearch.tsx
 msgid "Search"
-msgstr ""
+msgstr "חיפוש"
 
 #. js-lingui-id: g2dQp/
 #: src/modules/settings/roles/role-permissions/object-level-permissions/record-level-permissions/components/SettingsRolePermissionsObjectLevelRecordLevelPermissionMeValueSelect.tsx
@@ -31887,3 +31887,7 @@ msgstr "הגדל"
 #: src/modules/settings/data-model/graph-overview/components/SettingsDataModelOverview.tsx
 msgid "Zoom out"
 msgstr "הקטן"
+
+#. js-lingui-id: zmOvQO
+msgid "Open the page list"
+msgstr "פתיחת רשימת העמודים"

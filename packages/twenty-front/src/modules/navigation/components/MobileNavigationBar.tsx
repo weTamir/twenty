@@ -1,123 +1,106 @@
-import { MobileNavigationBarScrollEffect } from '@/navigation/components/MobileNavigationBarScrollEffect';
-import { MOBILE_NAVIGATION_BAR_PADDING } from '@/navigation/constants/MobileNavigationBarPadding';
 import { useMobileNavigationBarItems } from '@/navigation/hooks/useMobileNavigationBarItems';
-import { isMobileNavigationBarVisibleState } from '@/navigation/states/isMobileNavigationBarVisibleState';
 import { isSidePanelOpenedState } from '@/side-panel/states/isSidePanelOpenedState';
 import { RootStackingContextZIndices } from '@/ui/layout/constants/RootStackingContextZIndices';
 import { useAtomStateValue } from '@/ui/utilities/state/jotai/hooks/useAtomStateValue';
-import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 import { useLocation } from 'react-router-dom';
-import { IconButton } from 'twenty-ui/components/input';
 import { themeCssVariables } from 'twenty-ui/theme';
 import { isAiChatPath } from '~/utils/isAiChatPath';
 
-// Lets taps reach the page scrolling underneath; flex-start follows the writing direction.
-const StyledFloatingContainer = styled.div`
-  bottom: 0;
+// Hamania: a docked, full-width tab bar in the layout flow (Twenty floats a small pill over the page),
+// so it never covers the bottom controls of a page and always reads as navigation.
+const StyledNavigationBar = styled.nav`
+  backdrop-filter: ${themeCssVariables.blur.strong};
+  background: ${themeCssVariables.background.primary};
+  border-top: 1px solid ${themeCssVariables.border.color.medium};
+  box-sizing: border-box;
   display: flex;
-  justify-content: flex-start;
-  left: 0;
-  padding: ${MOBILE_NAVIGATION_BAR_PADDING};
-  padding-bottom: calc(
-    ${MOBILE_NAVIGATION_BAR_PADDING} + env(safe-area-inset-bottom, 0px)
-  );
-  pointer-events: none;
-  position: absolute;
-  right: 0;
+  flex: 0 0 auto;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  position: relative;
+  width: 100%;
   z-index: ${RootStackingContextZIndices.MobileNavigationBar};
+
+  &[data-hidden] {
+    display: none;
+  }
 
   @media print {
     display: none;
   }
 `;
 
-const StyledNavigationBar = styled.nav`
+const StyledNavigationButton = styled.button`
   align-items: center;
-  backdrop-filter: ${themeCssVariables.blur.strong};
-  background: ${themeCssVariables.background.transparent.primary};
-  border: 1px solid ${themeCssVariables.border.color.transparentStrong};
-  border-radius: ${themeCssVariables.border.radius.pill};
-  box-shadow: ${themeCssVariables.boxShadow.strong};
-  box-sizing: border-box;
-  corner-shape: round;
+  background: none;
+  border: none;
+  color: ${themeCssVariables.font.color.tertiary};
+  cursor: pointer;
   display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  font-family: inherit;
+  font-size: ${themeCssVariables.font.size.sm};
+  font-weight: ${themeCssVariables.font.weight.medium};
   gap: ${themeCssVariables.spacing[1]};
   justify-content: center;
-  padding: ${themeCssVariables.spacing[1]};
-  pointer-events: auto;
-  transition:
-    opacity calc(${themeCssVariables.animation.duration.normal} * 1s) ease,
-    transform calc(${themeCssVariables.animation.duration.normal} * 1s) ease,
-    visibility calc(${themeCssVariables.animation.duration.normal} * 1s);
-  width: max-content;
-
-  &[data-hidden] {
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(calc(100% + ${themeCssVariables.spacing[4]}));
-    visibility: hidden;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    transition: none;
-  }
-`;
-
-const navigationButtonClassName = css`
-  block-size: ${themeCssVariables.spacing[10]};
-  color: ${themeCssVariables.grayScale.gray10};
-  inline-size: ${themeCssVariables.spacing[10]};
+  min-height: ${themeCssVariables.spacing[16]};
+  min-width: 0;
+  padding: ${themeCssVariables.spacing[2]} ${themeCssVariables.spacing[1]};
+  -webkit-tap-highlight-color: transparent;
 
   &[aria-current='page'] {
-    background: ${themeCssVariables.background.transparent.medium};
+    color: ${themeCssVariables.color.blue};
+  }
+
+  &:active {
+    background: ${themeCssVariables.background.transparent.light};
+  }
+
+  &:focus-visible {
+    outline: 2px solid ${themeCssVariables.color.blue};
+    outline-offset: -4px;
+  }
+
+  & > svg {
+    block-size: 28px;
+    inline-size: 28px;
   }
 `;
 
-const navigationIconClassName = css`
-  block-size: calc(${themeCssVariables.icon.size.lg} * 1px);
-  inline-size: calc(${themeCssVariables.icon.size.lg} * 1px);
+const StyledNavigationLabel = styled.span`
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 `;
 
 export const MobileNavigationBar = () => {
   const { pathname } = useLocation();
   const isSidePanelOpened = useAtomStateValue(isSidePanelOpenedState);
-  const isMobileNavigationBarVisible = useAtomStateValue(
-    isMobileNavigationBarVisibleState,
-  );
   const { items, activeItemName } = useMobileNavigationBarItems();
 
   // The chat page keeps the keyboard up and carries its own close button.
-  const isHidden =
-    isSidePanelOpened ||
-    !isMobileNavigationBarVisible ||
-    isAiChatPath(pathname);
+  const isHidden = isSidePanelOpened || isAiChatPath(pathname);
 
   return (
-    <>
-      <MobileNavigationBarScrollEffect />
-      <StyledFloatingContainer>
-        <StyledNavigationBar
-          data-hidden={isHidden ? '' : undefined}
-          aria-hidden={isHidden}
-          inert={isHidden || undefined}
+    <StyledNavigationBar
+      data-hidden={isHidden ? '' : undefined}
+      aria-hidden={isHidden}
+      inert={isHidden || undefined}
+    >
+      {items.map(({ Icon, name, label, onClick }) => (
+        <StyledNavigationButton
+          key={name}
+          type="button"
+          aria-current={activeItemName === name ? 'page' : undefined}
+          onClick={onClick}
+          tabIndex={isHidden ? -1 : 0}
         >
-          {items.map(({ Icon, name, label, onClick }) => (
-            <IconButton
-              key={name}
-              className={navigationButtonClassName}
-              variant="ghost"
-              shape="round"
-              aria-label={label}
-              aria-current={activeItemName === name ? 'page' : undefined}
-              onClick={onClick}
-              tabIndex={isHidden ? -1 : 0}
-            >
-              <Icon className={navigationIconClassName} aria-hidden />
-            </IconButton>
-          ))}
-        </StyledNavigationBar>
-      </StyledFloatingContainer>
-    </>
+          <Icon aria-hidden />
+          <StyledNavigationLabel>{label}</StyledNavigationLabel>
+        </StyledNavigationButton>
+      ))}
+    </StyledNavigationBar>
   );
 };

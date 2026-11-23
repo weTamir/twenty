@@ -21,6 +21,31 @@ HE = [
 ]
 
 
+# Hebrew for strings the Hamania UI shows that upstream leaves untranslated or that Hamania added.
+# The build's `lingui extract` keeps a msgstr whose msgid is still used in the source.
+HE_EXTRA = {
+    "Search": "חיפוש",
+    "Open the page list": "פתיחת רשימת העמודים",
+}
+
+
+def lingui_id(message):
+    import base64
+    import hashlib
+
+    return base64.b64encode(hashlib.sha256((message + "\x1f").encode()).digest()).decode()[:6]
+
+
+def add_hebrew(text):
+    for msgid, msgstr in HE_EXTRA.items():
+        entry = f'msgid "{msgid}"\nmsgstr ""\n'
+        if entry in text:
+            text = text.replace(entry, f'msgid "{msgid}"\nmsgstr "{msgstr}"\n')
+        elif f'msgid "{msgid}"\n' not in text:
+            text = text.rstrip("\n") + f'\n\n#. js-lingui-id: {lingui_id(msgid)}\nmsgid "{msgid}"\nmsgstr "{msgstr}"\n'
+    return text
+
+
 def rewrite(name, rules):
     path = LOCALES / name
     text = path.read_text(encoding="utf-8")
@@ -37,6 +62,8 @@ def rewrite(name, rules):
 
     # a msgstr entry: the msgstr line and its continuation lines
     text = re.sub(r'^msgstr (?:".*"\n)+', fix, text, flags=re.M)
+    if name == "he-IL.po":
+        text = add_hebrew(text)
     path.write_text(text, encoding="utf-8", newline="\n")
     return changed
 
